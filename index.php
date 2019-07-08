@@ -8,7 +8,7 @@ if($method == 'POST'){
 	$json = json_decode($requestBody);
 
 	$text = $json->result->parameters->text;
-
+	
 
 	switch ($text) {
 		case 'hi':
@@ -31,7 +31,7 @@ if($method == 'POST'){
 
 	$response = new \stdClass();
 	$response->speech = $speech;
-	$response->displayText = $text;
+	$response->displayText = $speech;
 	$response->source = "webhook";
 	echo json_encode($response);
 }
