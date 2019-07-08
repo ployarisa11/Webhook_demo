@@ -37,7 +37,7 @@ if($method == 'POST'){
 }
 else
 {
-	echo $text;
+	echo json_encode($text)
 }
 
 ?>
