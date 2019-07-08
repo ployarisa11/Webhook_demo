@@ -8,7 +8,7 @@ if($method == 'POST'){
 	$json = json_decode($requestBody);
 
 	$text = $json->result->parameters->text;
-	echo $text;
+
 
 	switch ($text) {
 		case 'hi':
@@ -37,7 +37,7 @@ if($method == 'POST'){
 }
 else
 {
-	echo "Method not allowed";
+	echo $text;
 }
 
 ?>
