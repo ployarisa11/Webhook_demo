@@ -9,7 +9,7 @@ if($method == 'POST'){
 	$json = json_decode($requestBody);
 
 	$text = $json->result->parameters->text;
-	echo json_encode($text);
+	echo json_encode("pp");
 
 	switch ($text) {
 		case 'hi':
