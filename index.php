@@ -29,12 +29,12 @@ if($method == 'POST'){
 			break;
 	}
 
-
-	$Responses = new \stdClass();
-	$Responses->speech = $speech;
-	$Responses->displayText = $speech;
-	$Responses->source = "webhook";
-	echo json_encode($Responses);
+	$fulfillmentText = $speech;
+	$response = new \stdClass();
+	$response->speech = $speech;
+	$response->displayText = $speech;
+	$response->source = "webhook";
+	echo json_encode($fulfillmentText);
 }
 else
 {
