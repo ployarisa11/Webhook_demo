@@ -27,6 +27,8 @@ if($method == 'POST'){
 			break;
 	}
 
+	$speech = "pp";
+
 	$response = new \stdClass();
 	$response->speech = $speech;
 	$response->displayText = $speech;
