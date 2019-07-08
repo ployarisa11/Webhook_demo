@@ -8,6 +8,7 @@ if($method == 'POST'){
 	$json = json_decode($requestBody);
 
 	$text = $json->result->parameters->text;
+	echo $text;
 
 	switch ($text) {
 		case 'hi':
