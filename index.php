@@ -8,7 +8,7 @@ if($method == 'POST'){
 	$json = json_decode($requestBody);
 
 	$text = $json->result->parameters->text;
-	
+
 
 	switch ($text) {
 		case 'hi':
@@ -24,7 +24,7 @@ if($method == 'POST'){
 			break;
 		
 		default:
-			$speech = "Sorry, I didnt get that. Please ask me something else.";
+			$speech = $text;
 			break;
 	}
 
