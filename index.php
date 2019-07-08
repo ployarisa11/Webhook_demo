@@ -30,11 +30,11 @@ if($method == 'POST'){
 	}
 
 
-	$fulfillmentText = new \stdClass();
-	$fulfillmentText->speech = $speech;
-	$fulfillmentText->displayText = $speech;
-	$fulfillmentText->source = "webhook";
-	echo json_encode($fulfillmentText);
+	$Responses = new \stdClass();
+	$Responses->speech = $speech;
+	$Responses->displayText = $speech;
+	$Responses->source = "webhook";
+	echo json_encode($Responses);
 }
 else
 {
