@@ -27,7 +27,7 @@ if($method == 'POST'){
 			break;
 	}
 
-	$speech = $text;
+	$speech = text;
 
 	$response = new \stdClass();
 	$response->speech = $speech;
