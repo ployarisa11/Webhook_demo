@@ -12,7 +12,7 @@ if($method == 'POST'){
 	$queryText = $request["queryResult"]["queryText"];
 	$userId = $request['originalDetectIntentRequest']['payload']['data']['source']['userId'];
 	
-	echo json_encode($userId, 'ploy');
+	echo json_encode($date);
 
 	// $json = json_decode($requestBody);
 
