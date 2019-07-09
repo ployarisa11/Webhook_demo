@@ -28,8 +28,9 @@ if($method == 'POST'){
 			$speech = $text;
 			break;
 	}
+	$requestBody ->reply('Hi, how can I help?');
 
-	echo json_encode($requestBody);
+	echo json_encode($text);
 	
 	// $agent->reply('Hi, how can I help?');
 	$response = new \stdClass();
