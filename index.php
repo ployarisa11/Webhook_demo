@@ -11,38 +11,38 @@ if($method == 'POST'){
 	$queryText = $request["queryResult"]["queryText"];
 	$userId = $request['originalDetectIntentRequest']['payload']['data']['source']['userId'];
 	
-	
+	echo json_encode($queryText);
 
-	$json = json_decode($requestBody);
-
-
-	$text = $json->queryResult->parameters->text;
+	// $json = json_decode($requestBody);
 
 
-	switch ($text) {
-		case 'hi':
-			$speech = "Hi, Nice to meet you";
-			break;
+	// $text = $json->queryResult->parameters->text;
 
-		case 'bye':
-			$speech = "Bye, good night";
-			break;
 
-		case 'anything':
-			$speech = "Yes, you can type anything here.";
-			break;
+	// switch ($text) {
+	// 	case 'hi':
+	// 		$speech = "Hi, Nice to meet you";
+	// 		break;
+
+	// 	case 'bye':
+	// 		$speech = "Bye, good night";
+	// 		break;
+
+	// 	case 'anything':
+	// 		$speech = "Yes, you can type anything here.";
+	// 		break;
 		
-		default:
-			$speech = $queryText;
-			break;
-	}
+	// 	default:
+	// 		$speech = $queryText;
+	// 		break;
+	// }
 
 	
-	$response = new \stdClass();
-	$response->speech = $speech;
-	$response->displayText = $speech;
-	$response->source = "webhook";
-	echo json_encode($response);
+	// $response = new \stdClass();
+	// $response->speech = $speech;
+	// $response->displayText = $speech;
+	// $response->source = "webhook";
+	// echo json_encode($response);
 }
 else
 {
