@@ -30,12 +30,13 @@ if($method == 'POST'){
 	}
 
 	
+	$agent->reply('Hi, how can I help?');
 	$response = new \stdClass();
 	$response->speech = $speech;
 	$response->displayText = $speech;
 	$response->source = "webhook";
 	echo json_encode($response);
-	// $agent->reply('Hi, how can I help?');
+
 }
 else
 {
