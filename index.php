@@ -7,6 +7,9 @@ if($method == 'POST'){
 	$date = date("Y-m-d");
 	$time = date("H:i:s");
 	$requestBody = file_get_contents('php://input');
+	$request = json_decode($json, true);
+	$queryText = $request["queryResult"]["queryText"];
+	$userId = $request['originalDetectIntentRequest']['payload']['data']['source']['userId'];
 	
 	
 
@@ -30,7 +33,7 @@ if($method == 'POST'){
 			break;
 		
 		default:
-			$speech = $date;
+			$speech = $queryText;
 			break;
 	}
 
