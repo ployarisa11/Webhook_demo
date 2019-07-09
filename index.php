@@ -29,13 +29,14 @@ if($method == 'POST'){
 			break;
 	}
 
+	echo json_encode($text);
 	
 	// $agent->reply('Hi, how can I help?');
 	$response = new \stdClass();
 	$response->speech = $speech;
 	$response->displayText = $speech;
 	$response->source = "webhook";
-	echo json_encode($text);
+	
 
 
 }
