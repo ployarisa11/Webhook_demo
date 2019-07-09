@@ -7,6 +7,7 @@ if($method == 'POST'){
 	$date = date("Y-m-d");
 	$time = date("H:i:s");
 	$requestBody = file_get_contents('php://input');
+	$text = $json->queryResult->parameters->text;
 	$request = json_decode($json, true);
 	$queryText = $request["queryResult"]["queryText"];
 	$userId = $request['originalDetectIntentRequest']['payload']['data']['source']['userId'];
@@ -16,7 +17,7 @@ if($method == 'POST'){
 	// $json = json_decode($requestBody);
 
 
-	// $text = $json->queryResult->parameters->text;
+	
 
 
 	// switch ($text) {
