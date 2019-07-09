@@ -29,7 +29,7 @@ if($method == 'POST'){
 			break;
 	}
 
-	echo json_encode($text);
+	echo json_encode($text->reply());
 	
 	// $agent->reply('Hi, how can I help?');
 	$response = new \stdClass();
