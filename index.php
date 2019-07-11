@@ -8,7 +8,7 @@ if($method == 'POST'){
 	$json = json_decode($requestBody);
 
 	$text = $json->queryResult->parameters->text;
-	$responseId = $json->responseId;
+	// $responseId = $json->responseId;
 
 	switch ($text) {
 		case 'hi':
@@ -24,7 +24,7 @@ if($method == 'POST'){
 			break;
 		
 		default:
-			$speech = $responseId;
+			$speech = 'pppp';
 			break;
 	}
 
@@ -32,7 +32,10 @@ if($method == 'POST'){
 	$response->speech = $speech;
 	$response->displayText = $speech;
 	$response->source = "webhook";
+
 	echo json_encode($response);
+	$fulfillmentText = $json->queryResult->$speech;
+	echo $fulfillmentText;
 }
 else
 {
