@@ -8,6 +8,7 @@ if($method == 'POST'){
 	$json = json_decode($requestBody);
 
 	$text = $json->queryResult->parameters->text;
+	$responseId = $json->queryResult->fulfillmentText;
 
 	switch ($text) {
 		case 'hi':
@@ -23,7 +24,7 @@ if($method == 'POST'){
 			break;
 		
 		default:
-			$speech = "Sorry, I didnt get that. Please ask me something else.";
+			$speech = $responseId;
 			break;
 	}
 
