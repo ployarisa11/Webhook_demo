@@ -28,10 +28,12 @@ if($method == 'POST'){
 			break;
 	}
 
-	$response = new \stdClass();
-	$response->speech = $speech;
-	$response->displayText = $speech;
-	$response->source = "webhook";
+	// $response = new \stdClass();
+	// $response->speech = $speech;
+	// $response->displayText = $speech;
+	// $response->source = "webhook";
+
+	$response = "It is $temperature degrees with $weatherDescription";
 
 	// echo json_encode($response);
 	$fulfillment = array(
