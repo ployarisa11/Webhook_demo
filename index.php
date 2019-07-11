@@ -8,7 +8,7 @@ if($method == 'POST'){
 	$json = json_decode($requestBody);
 
 	$text = $json->queryResult->parameters->text;
-	$responseId = $json->queryResult->fulfillmentText;
+	$responseId = $json->responseId;
 
 	switch ($text) {
 		case 'hi':
