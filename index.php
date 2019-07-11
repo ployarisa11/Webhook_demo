@@ -33,14 +33,14 @@ if($method == 'POST'){
 	// $response->displayText = $speech;
 	// $response->source = "webhook";
 
-	$response = "It is $temperature degrees with $weatherDescription";
+	$response = "It is $temperature degrees with";
 
 	// echo json_encode($response);
 	$fulfillment = array(
        "fulfillmentText" => $response
    );
 
-   echo json_encode($fulfillment) ;
+   echo(json_encode($fulfillment));
 }
 else
 {
