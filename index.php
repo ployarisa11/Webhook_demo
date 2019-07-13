@@ -7,7 +7,12 @@
 	$requestBody = file_get_contents('php://input');
 	$json = json_decode($requestBody);
 
-	$text = $json->queryResult->parameters->text;
+	$weight = $json->queryResult->parameters->weight;
+	$height = $json->queryResult->parameters->height;
+	$bmi = ($weight / ($height * $height));
+	
+
+	// $text = $json->queryResult->parameters->text;
 	// $responseId = $json->responseId;
 
 	// switch ($text) {
@@ -33,12 +38,12 @@
 	// $response->displayText = $speech;
 	// $response->source = "webhook";
 
-	$response = "It is $temperature degrees with";
+	// $response = "It is $temperature degrees with";
 	// echo json_encode($response);
 
 	//show user
 	$fulfillment = array(
-       "fulfillmentText" => $response
+       "fulfillmentText" => $bmi
    );
 
    echo(json_encode($fulfillment));
