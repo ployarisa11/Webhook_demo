@@ -69,7 +69,7 @@
        "fulfillmentText" => $result
    );
 
-   // echo(json_encode($fulfillment));
+   echo(json_encode($fulfillment));
 // }
 // else
 // {
