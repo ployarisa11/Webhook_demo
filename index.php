@@ -10,7 +10,30 @@
 	$weight = $json->queryResult->parameters->weight;
 	$height = $json->queryResult->parameters->height/100;
 	$bmi = round(($weight / ($height * $height)),2);
+	$result = "none";
 	
+	if ($bmi < 18.5) {
+		$result = "XS";
+	} 
+
+	elseif ($bmi>= 18.5 && $bmi < 23) {
+		$result = "S";
+	}
+
+	elseif ($bmi >= 23 && $bmi < 25) {
+		$result = "M";
+	}
+
+	elseif ($bmi >= 25 && $bmi < 30) {
+		$result = "L";
+	}
+
+	elseif ($bmi >= 30) {
+		$result = "XL";
+	}
+
+
+		
 
 	// $text = $json->queryResult->parameters->text;
 	// $responseId = $json->resposeId;
@@ -43,7 +66,7 @@
 
 	//show user
 	$fulfillment = array(
-       "fulfillmentText" => $bmi
+       "fulfillmentText" => $result
    );
 
    echo(json_encode($fulfillment));
