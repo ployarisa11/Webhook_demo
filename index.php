@@ -10,7 +10,7 @@
 	$weight = $json->queryResult->parameters->weight;
 	$height = $json->queryResult->parameters->height;
 	$height = $height/100;
-	$bmi = ($weight / ($height * $height);
+	// $bmi = ($weight / ($height * $height);
 	
 
 	// $text = $json->queryResult->parameters->text;
@@ -44,7 +44,7 @@
 
 	//show user
 	$fulfillment = array(
-       "fulfillmentText" => $bmi
+       "fulfillmentText" => $height
    );
 
    echo(json_encode($fulfillment));
