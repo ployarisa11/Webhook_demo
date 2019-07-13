@@ -8,7 +8,7 @@
 	$json = json_decode($requestBody);
 
 	$weight = $json->queryResult->parameters->weight;
-	$height = $json->queryResult->parameters->height;
+	$height = $json->queryResult->parameters->height/100;
 	$bmi = ($weight / ($height * $height));
 	
 
