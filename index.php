@@ -9,7 +9,7 @@
 
 	$weight = $json->queryResult->parameters->weight;
 	$height = $json->queryResult->parameters->height/100;
-	$bmi = round(($weight / ($height * $height)), 2);
+	$bmi = round(($weight / ($height * $height)),2);
 	
 
 	// $text = $json->queryResult->parameters->text;
